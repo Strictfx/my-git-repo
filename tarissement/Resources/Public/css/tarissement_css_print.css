@@ -1,0 +1,13 @@
+#headerv1, #filarianne, #menuhaut, #toplinks, #footer, .tx_tarissement_btn_valider {
+	display:none !important;
+}
+
+html, body {
+	background-image:none !important;
+	background-color:white !important;
+}
+
+#center_page {
+	background-image:none !important;
+	background-color:white !important;
+}

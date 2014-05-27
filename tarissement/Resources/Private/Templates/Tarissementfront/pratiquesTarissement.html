@@ -1,0 +1,232 @@
+<div class="tx_tarissement_general" id="tx_tarissement_etape3">
+
+	<img src="" alt="Img etape" />
+	
+	<h2>Mes pratiques de tarissement au cours de la période sèche</h2>
+	<f:form method="post" action="pratiquesTarissementForm" id="tx_tarissement_pratiquesTarissementForm">
+	
+		<label>Est-ce que les vaches taries restent en bâtiment ?</label>
+		<f:if condition="{tx_tarissement_enBatiment}">
+			<f:then>
+				<f:form.radio name="tx_tarissement_enBatiment" value="oui" id="tx_tarissement_enBatimentOui" checked="true" /> 
+			</f:then>
+			<f:else>
+			<f:form.radio name="tx_tarissement_enBatiment" value="oui" id="tx_tarissement_enBatimentOui" /> 
+			</f:else>
+		</f:if>
+		<label for="tx_tarissement_enBatimentOui" class="tx_tarissement_ouiNon tx_tarissement_enBatiment">Oui</label>
+		<f:if condition="{tx_tarissement_enBatiment}">
+			<f:then>
+				<f:form.radio name="tx_tarissement_enBatiment" value="non" id="tx_tarissement_enBatimentNon" /> 
+			</f:then>
+			<f:else>
+			<f:form.radio name="tx_tarissement_enBatiment" value="non" id="tx_tarissement_enBatimentNon" checked="true" /> 
+			</f:else>
+		</f:if>
+		<label for="tx_tarissement_enBatimentNon" class="tx_tarissement_ouiNon tx_tarissement_enBatiment">Non</label>
+		<br />
+		
+		<div id="tx_tarissement_OuiEnBatiment">
+			<p>Si oui, concernant le logement des vaches taries en stabulation :</p>
+			
+			<label>1/ La surface de couchage est-elle suffisante ? 
+			<span class="tx_tarissement_spanHelp">
+				<f:image src="EXT:tarissement/Resources/Public/images/question.png" width="20" height="20" alt="Informations supplémentaires" class="tx_tarissement_help" />
+				<span class="tx_tarissement_encartHelp">
+						Format des logettes adapté ou surface de couchage par vache &gt; 6m&sup2;.
+				</span>
+			</span>
+		
+			</label>
+			<f:if condition="{tx_tarissement_surfaceCouchage}">
+				<f:then>
+					<f:form.radio name="tx_tarissement_surfaceCouchage" value="oui" id="tx_tarissement_surfaceCouchageOui" checked="true" /> 
+				</f:then>
+				<f:else>
+					<f:form.radio name="tx_tarissement_surfaceCouchage" value="oui" id="tx_tarissement_surfaceCouchageOui" /> 
+				</f:else>
+			</f:if>
+			<label for="tx_tarissement_surfaceCouchageOui" class="tx_tarissement_ouiNon tx_tarissement_surfaceCouchage">Oui</label>
+			<f:if condition="{tx_tarissement_surfaceCouchage}">
+				<f:then>
+					<f:form.radio name="tx_tarissement_surfaceCouchage" value="non" id="tx_tarissement_surfaceCouchageNon" /> 
+				</f:then>
+				<f:else>
+					<f:form.radio name="tx_tarissement_surfaceCouchage" value="non" id="tx_tarissement_surfaceCouchageNon" checked="true" /> 
+				</f:else>
+			</f:if>
+			<label for="tx_tarissement_surfaceCouchageNon" class="tx_tarissement_ouiNon tx_tarissement_surfaceCouchage">Non</label>
+			<br />
+			<br />
+			
+			<label>2/ Y-a-t-il une hygiène quotidienne du logement ? 
+			<span class="tx_tarissement_spanHelp">
+				<f:image src="EXT:tarissement/Resources/Public/images/question.png" width="20" height="20" alt="Informations supplémentaires" class="tx_tarissement_help" />
+				<span class="tx_tarissement_encartHelp">
+						Hygiène quotidienne : paillage quotidienne et raclage en même temps que les vaches laitières.
+				</span>
+			</span>
+			</label>
+			<f:if condition="{tx_tarissement_hygieneQuotidienne}">
+				<f:then>
+					<f:form.radio name="tx_tarissement_hygieneQuotidienne" value="oui" id="tx_tarissement_hygieneQuotidienneOui" checked="true" /> 
+				</f:then>
+				<f:else>
+					<f:form.radio name="tx_tarissement_hygieneQuotidienne" value="oui" id="tx_tarissement_hygieneQuotidienneOui" /> 
+				</f:else>
+			</f:if>
+			<label for="tx_tarissement_hygieneQuotidienneOui" class="tx_tarissement_ouiNon tx_tarissement_hygieneQuotidienne">Oui</label>
+			<f:if condition="{tx_tarissement_hygieneQuotidienne}">
+				<f:then>
+					<f:form.radio name="tx_tarissement_hygieneQuotidienne" value="non" id="tx_tarissement_hygieneQuotidienneNon" /> 
+				</f:then>
+				<f:else>
+					<f:form.radio name="tx_tarissement_hygieneQuotidienne" value="non" id="tx_tarissement_hygieneQuotidienneNon" checked="true" /> 
+				</f:else>
+			</f:if>
+			<label for="tx_tarissement_hygieneQuotidienneNon" class="tx_tarissement_ouiNon tx_tarissement_hygieneQuotidienne">Non</label>
+			<br />
+			<br />
+			
+			<label>3/ La ventilation du bâtiment est-elle correcte ?</label>
+			<f:if condition="{tx_tarissement_ventilationBatiment}">
+				<f:then>
+					<f:form.radio name="tx_tarissement_ventilationBatiment" value="oui" id="tx_tarissement_ventilationBatimentOui" checked="true" /> 
+				</f:then>
+				<f:else>
+					<f:form.radio name="tx_tarissement_ventilationBatiment" value="oui" id="tx_tarissement_ventilationBatimentOui" /> 
+				</f:else>
+			</f:if>
+			<label for="tx_tarissement_ventilationBatimentOui" class="tx_tarissement_ouiNon tx_tarissement_ventilationBatiment">Oui</label>
+			<f:if condition="{tx_tarissement_ventilationBatiment}">
+				<f:then>
+					<f:form.radio name="tx_tarissement_ventilationBatiment" value="non" id="tx_tarissement_ventilationBatimentNon" /> 
+				</f:then>
+				<f:else>
+					<f:form.radio name="tx_tarissement_ventilationBatiment" value="non" id="tx_tarissement_ventilationBatimentNon" checked="true"  /> 
+				</f:else>
+			</f:if>
+			<label for="tx_tarissement_ventilationBatimentNon" class="tx_tarissement_ouiNon tx_tarissement_ventilationBatiment">Non</label>
+			<br />
+			<br />
+			
+			<label>4/ Y-a-t-il des possibilités d'exercise physique ? 
+			<span class="tx_tarissement_spanHelp">
+				<f:image src="EXT:tarissement/Resources/Public/images/question.png" width="20" height="20" alt="Informations supplémentaires" class="tx_tarissement_help" />
+				<span class="tx_tarissement_encartHelp">
+						Par exemple : Présence d'une aire d'exercise &gt; à 4 m&sup2; par vache ou présence d'une aire de promenade.
+				</span>
+			</span>
+			</label>
+			<f:if condition="{tx_tarissement_exercisePhysique}">
+				<f:then>
+					<f:form.radio name="tx_tarissement_exercisePhysique" value="oui" id="tx_tarissement_exercisePhysiqueOui" checked="true" /> 
+				</f:then>
+				<f:else>
+					<f:form.radio name="tx_tarissement_exercisePhysique" value="oui" id="tx_tarissement_exercisePhysiqueOui" /> 
+				</f:else>
+			</f:if>
+			<label for="tx_tarissement_exercisePhysiqueOui" class="tx_tarissement_ouiNon tx_tarissement_exercisePhysique">Oui</label>
+			<f:if condition="{tx_tarissement_exercisePhysique}">
+				<f:then>
+					<f:form.radio name="tx_tarissement_exercisePhysique" value="non" id="tx_tarissement_exercisePhysiqueNon" /> 
+				</f:then>
+				<f:else>
+					<f:form.radio name="tx_tarissement_exercisePhysique" value="non" id="tx_tarissement_exercisePhysiqueNon" checked="true"  /> 
+				</f:else>
+			</f:if>
+			<label for="tx_tarissement_exercisePhysiqueNon" class="tx_tarissement_ouiNon tx_tarissement_exercisePhysique">Non</label>
+			<br />
+			<br />
+			
+		</div>
+		<br />
+		
+		<label>Est-ce que les vaches taries sortent au pâturage ?</label>
+			<f:if condition="{tx_tarissement_sortentPaturage}">
+				<f:then>
+					<f:form.radio name="tx_tarissement_sortentPaturage" value="oui" id="tx_tarissement_sortentPaturageOui" checked="true" /> 
+				</f:then>
+				<f:else>
+					<f:form.radio name="tx_tarissement_sortentPaturage" value="oui" id="tx_tarissement_sortentPaturageOui"  /> 
+				</f:else>
+			</f:if>
+			<label for="tx_tarissement_sortentPaturageOui" class="tx_tarissement_ouiNon tx_tarissement_sortentPaturage">Oui</label>
+			<f:if condition="{tx_tarissement_sortentPaturage}">
+				<f:then>
+					<f:form.radio name="tx_tarissement_sortentPaturage" value="non" id="tx_tarissement_sortentPaturageNon" /> 
+				</f:then>
+				<f:else>
+					<f:form.radio name="tx_tarissement_sortentPaturage" value="non" id="tx_tarissement_sortentPaturageNon" checked="true" /> 
+				</f:else>
+			</f:if>
+			<label for="tx_tarissement_sortentPaturageNon" class="tx_tarissement_ouiNon tx_tarissement_sortentPaturage">Non</label>
+		<br />
+		
+		<div id="tx_tarissement_OuiAuPaturage">
+			<p>Si oui, concernant le pâturage :</p>
+			
+			<label>1/ Les zones de couchages sont-elles à risque (animaux couchés au même endroit, présence de râteliers, abreuvoirs pourtour d'arbres, ...) ? 
+			<span class="tx_tarissement_spanHelp">
+				<f:image src="EXT:tarissement/Resources/Public/images/question.png" width="20" height="20" alt="Informations supplémentaires" class="tx_tarissement_help" />
+				<span class="tx_tarissement_encartHelp">
+						Est-ce que la parcelle est saine ?
+				</span>
+			</span>
+			</label>
+			<f:if condition="{tx_tarissement_couchageARisque}">
+				<f:then>
+					<f:form.radio name="tx_tarissement_couchageARisque" value="oui" id="tx_tarissement_couchageARisqueOui" checked="true" /> 
+				</f:then>
+				<f:else>
+					<f:form.radio name="tx_tarissement_couchageARisque" value="oui" id="tx_tarissement_couchageARisqueOui" /> 
+				</f:else>
+			</f:if>
+			<label for="tx_tarissement_couchageARisqueOui" class="tx_tarissement_ouiNon tx_tarissement_couchageARisque">Oui</label> 
+			<f:if condition="{tx_tarissement_couchageARisque}">
+				<f:then>
+					<f:form.radio name="tx_tarissement_couchageARisque" value="non" id="tx_tarissement_couchageARisqueNon"  /> 
+				</f:then>
+				<f:else>
+					<f:form.radio name="tx_tarissement_couchageARisque" value="non" id="tx_tarissement_couchageARisqueNon" checked="true" /> 
+				</f:else>
+			</f:if>
+			<label for="tx_tarissement_couchageARisqueNon" class="tx_tarissement_ouiNon tx_tarissement_couchageARisque">Non</label>
+			<br />
+			<br />
+		</div>
+		<br />
+		<div class="tx_tarissement_clear"></div>
+		
+		<label>Est-ce que les vaches réintègrent le troupeau des animaux en production avant le jour du vêlage ?</label> 
+			<f:if condition="{tx_tarissement_reintegrationTroupeau}">
+				<f:then>
+					<f:form.radio name="tx_tarissement_reintegrationTroupeau" value="oui" id="tx_tarissement_reintegrationTroupeauOui" checked="true" /> 
+				</f:then>
+				<f:else>
+					<f:form.radio name="tx_tarissement_reintegrationTroupeau" value="oui" id="tx_tarissement_reintegrationTroupeauOui" /> 
+				</f:else>
+			</f:if>
+			<label for="tx_tarissement_reintegrationTroupeauOui" class="tx_tarissement_ouiNon tx_tarissement_reintegrationTroupeau">Oui</label>
+			<f:if condition="{tx_tarissement_reintegrationTroupeau}">
+				<f:then>
+					<f:form.radio name="tx_tarissement_reintegrationTroupeau" value="non" id="tx_tarissement_reintegrationTroupeauNon" /> 
+				</f:then>
+				<f:else>
+					<f:form.radio name="tx_tarissement_reintegrationTroupeau" value="non" id="tx_tarissement_reintegrationTroupeauNon" checked="true" /> 
+				</f:else>
+			</f:if>
+			<label for="tx_tarissement_reintegrationTroupeauNon" class="tx_tarissement_ouiNon tx_tarissement_reintegrationTroupeau">Non</label>
+		<br />
+		<br />
+	
+	<p class="tx_tarissement_rouge">En cas de doute, consulter votre vétérinaire</p>
+	
+	<a class="tx_tarissement_btn_valider" id="tx_tarissement_btn_suite" />Valider</a>
+	
+	<f:link.action action="situationVaches" class="tx_tarissement_btn_valider">Situation de mes vaches</f:link.action>
+	
+	<f:link.action action="situationTroupeau" class="tx_tarissement_btn_valider">Accueil</f:link.action>
+	</f:form>
+	
+</div>

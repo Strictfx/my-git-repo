@@ -1,0 +1,124 @@
+<div class="tx_tarissement_general" id="tx_tarissement_etape2">
+
+	<img src="" alt="Img etape" />
+	
+	<h2>La situation de mes vaches ?</h2>
+	
+	<!-- Formulaire d'ajout de vache -->
+	<div id="tx_tarissement_situationVachesDivForm">
+		
+		<h3 id='tx_tarissement_titreFormVache'>Ajout d'une vache</h3>
+	
+		<f:form method="post" action="pratiquesTarissement" id="tx_tarissement_situationVachesForm">
+		<label for="tx_tarissement_nomVache">Nom ou numéro de la vache</label> 
+		<f:form.textfield name="nomVache" value="" id="tx_tarissement_nomVache" />
+		<f:form.hidden name="ancienNomVache" value="" id="tx_tarissement_ancienNomVache" />
+		<br />
+		<br />
+		<label for="tx_tarissement_CCI">CCI (cell/mL) 
+		<span class="tx_tarissement_spanHelp">
+			<f:image src="EXT:tarissement/Resources/Public/images/question.png" width="20" height="20" alt="Informations supplémentaires" class="tx_tarissement_help" />
+			<span class="tx_tarissement_encartHelp">
+					Dernier CCI avant la date prévue de tarissement à retrouver dans le bilan mensuel produit par le vétérinaire.
+			</span>
+		</span>
+		</label> <f:form.textfield name="CCI" value="" id="tx_tarissement_CCI" /><br />
+		<br />
+		<label for="tx_tarissement_mammiteClinique">Présence d'une mammite clinique dans le dernire trimestre de la lactation ? 
+		<span class="tx_tarissement_spanHelp">
+			<f:image src="EXT:tarissement/Resources/Public/images/question.png" width="20" height="20" alt="Informations supplémentaires" class="tx_tarissement_help" />
+			<span class="tx_tarissement_encartHelp">
+					Est-ce-que la vache a eu au moins une mammite au cours du dernier trimestre de la lactation ?
+			</span>
+		</span>
+		</label>
+			<f:form.radio name="mammiteClinique" value="oui" id="tx_tarissement_mammiteCliniqueOui" /> <label for="tx_tarissement_mammiteCliniqueOui" class="tx_tarissement_ouiNon tx_tarissement_mammiteClinique">Oui</label>
+			<f:form.radio name="mammiteClinique" value="non" id="tx_tarissement_mammiteCliniqueNon" /> <label for="tx_tarissement_mammiteCliniqueNon" class="tx_tarissement_ouiNon tx_tarissement_mammiteClinique">Non</label>
+		<br />
+		<br />
+		<label for="tx_tarissement_troisiemeLactation">Cet animal est-il en troisième lactation ou plus ?</label>
+			<f:form.radio name="troisiemeLactation" value="oui" id="tx_tarissement_troisiemeLactationOui" /> <label for="tx_tarissement_troisiemeLactationOui" class="tx_tarissement_ouiNon tx_tarissement_troisiemeLactation">Oui</label>
+			<f:form.radio name="troisiemeLactation" value="non" id="tx_tarissement_troisiemeLactationNon" /> <label for="tx_tarissement_troisiemeLactationNon" class="tx_tarissement_ouiNon tx_tarissement_troisiemeLactation">Non</label>
+		<br />
+		<br />
+		<label for="tx_tarissement_plancherMamelle">Le plancher de la mamelle descend sous le jarret ? 
+		<span class="tx_tarissement_spanHelp">
+			<f:image src="EXT:tarissement/Resources/Public/images/question.png" width="20" height="20" alt="Informations supplémentaires" class="tx_tarissement_help" />
+			<span class="tx_tarissement_encartHelp">
+					[Schéma]
+			</span>
+		</span>
+		</label>
+			<f:form.radio name="plancherMamelle" value="oui" id="tx_tarissement_plancherMamelleOui" /> <label for="tx_tarissement_plancherMamelleOui" class="tx_tarissement_ouiNon tx_tarissement_plancherMamelle">Oui</label>
+			<f:form.radio name="plancherMamelle" value="non" id="tx_tarissement_plancherMamelleNon" /> <label for="tx_tarissement_plancherMamelleNon" class="tx_tarissement_ouiNon tx_tarissement_plancherMamelle">Non</label>
+		<br />
+		<br />
+		<label for="tx_tarissement_presencePlaies">Y-a-t-il présence de plaies ou de gerçures sur le trayons ?</label>
+			<f:form.radio name="presencePlaies" value="oui" id="tx_tarissement_presencePlaiesOui" /> <label for="tx_tarissement_presencePlaiesOui" class="tx_tarissement_ouiNon tx_tarissement_presencePlaies">Oui</label>
+			<f:form.radio name="presencePlaies" value="non" id="tx_tarissement_presencePlaiesNon" /> <label for="tx_tarissement_presencePlaiesNon" class="tx_tarissement_ouiNon  tx_tarissement_presencePlaies">Non</label>
+		<br />
+		<br />
+		<label for="tx_tarissement_lesionsTrayon">Y-a-t-il des lésions de l'extrémité des trayons ?</label>
+			<f:form.radio name="lesionsTrayon" value="oui" id="tx_tarissement_lesionsTrayonOui" /> <label for="tx_tarissement_lesionsTrayonOui" class="tx_tarissement_ouiNon tx_tarissement_lesionsTrayon">Oui</label>
+			<f:form.radio name="lesionsTrayon" value="non" id="tx_tarissement_lesionsTrayonNon" /> <label for="tx_tarissement_lesionsTrayonNon" class="tx_tarissement_ouiNon tx_tarissement_lesionsTrayon">Non</label>
+		<br />
+		<br />
+		<label for="tx_tarissement_pertesLait">Dans les jours qui suivent le tarissement, la vache est-elle sujette à des pertes de lait ?</label>
+			<f:form.radio name="pertesLait" value="oui" id="tx_tarissement_pertesLaitOui" /> <label for="tx_tarissement_pertesLaitOui" class="tx_tarissement_ouiNon tx_tarissement_pertesLait">Oui</label>
+			<f:form.radio name="pertesLait" value="non" id="tx_tarissement_pertesLaitNon" /> <label for="tx_tarissement_pertesLaitNon" class="tx_tarissement_ouiNon tx_tarissement_pertesLait">Non</label>
+		<br />
+		<br />
+		<label for="tx_tarissement_trayonsCourts">Cette vache a-t-elle des trayons très courts (&lt; 3cm) et / ou est-elle sujette à des pertes de lait avant vêlage ?</label>
+			<f:form.radio name="trayonsCourts" value="oui" id="tx_tarissement_trayonsCourtsOui" /> <label for="tx_tarissement_trayonsCourtsOui" class="tx_tarissement_ouiNon tx_tarissement_trayonsCourts">Oui</label>
+			<f:form.radio name="trayonsCourts" value="non" id="tx_tarissement_trayonsCourtsNon" /> <label for="tx_tarissement_trayonsCourtsNon" class="tx_tarissement_ouiNon tx_tarissement_trayonsCourts">Non</label>
+		<br />
+		<br />
+		<a class="tx_tarissement_btn_valider" id="tx_tarissement_ajoutVache" />Ajouter</a>
+		<a class="tx_tarissement_btn_valider" id="tx_tarissement_modifVache" />Modifier</a>
+	</div>
+	
+	
+	<!-- Récapitulatif des vaches rentrées -->
+	<table border="1" cellpadding="5" cellspacing="0" class="tx_tarissement_listVache">
+		<tr class="tx_tarissement_ligne1">
+			<td class="tx_tarissement_tdNomVache">Numéro de la vache</td>
+			<td class="tx_tarissement_tdCCI">CCI</td>
+			<td class="tx_tarissement_tdMammiteClinique">mammite clinique</td>
+			<td class="tx_tarissement_tdTroisiemeLactation">troisième lactation</td>
+			<td class="tx_tarissement_tdPlancherMamelle">plancher mamelle</td>
+			<td class="tx_tarissement_tdPresencePlaies">présence plaies</td>
+			<td class="tx_tarissement_tdLesionsTrayons">lésions trayons</td>
+			<td class="tx_tarissement_tdPertesLait">pertes de lait</td>
+			<td class="tx_tarissement_tdTrayonsCourts">trayons courts</td>
+			<td class="tx_tarissement_tdSupp">Modif</td>
+			<td class="tx_tarissement_tdSupp">Supp</td>
+		</tr>
+		<f:for each="{listVaches}" as="objVache" key="number" iteration="itemIteration">
+		<tr id='vache{objVache.vache_nomVache}'>
+			<td>{objVache.vache_nomVache}</td>
+			<td>{objVache.vache_CCI}</td>
+			<td>{objVache.vache_mammiteClinique}</td>
+			<td>{objVache.vache_troisiemeLactation}</td>
+			<td>{objVache.vache_plancherMamelle}</td>
+			<td>{objVache.vache_presencePlaies}</td>
+			<td>{objVache.vache_lesionsTrayon}</td>
+			<td>{objVache.vache_pertesLait}</td>
+			<td>{objVache.vache_trayonsCourts}</td>
+			<td><a href="javascript:recupVacheForModif('{objVache.vache_nomVache}');" title="Modifier la ligne" class="tx_tarissement_modifVache" id="vache{objVache.vache_nomVache}"></a></td>
+			<td><a href="javascript:suppVache('{objVache.vache_nomVache}');" title="Supprimer la ligne" class="tx_tarissement_suppVache" id="vache{objVache.vache_nomVache}"></a></td>
+		</tr>
+		</f:for>
+		<f:if condition="{isVaches}">
+		<tr class="tx_tarissement_novache">
+			<td colspan="11">Aucune vache rentrée</td>
+		</tr>
+		</f:if>
+	</table>
+	
+	<p class="tx_tarissement_rouge">En cas de doute, consulter votre vétérinaire</p>
+	
+	<a class="tx_tarissement_btn_valider" id="tx_tarissement_btn_suite" />Valider</a>
+	
+	<f:link.action action="situationTroupeau" class="tx_tarissement_btn_valider">Accueil</f:link.action>
+	</f:form>
+</div>

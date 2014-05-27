@@ -1,0 +1,14 @@
+plugin.tx_tarissement {
+	view {
+		# cat=plugin.tx_tarissement/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:tarissement/Resources/Private/Templates/
+		# cat=plugin.tx_tarissement/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:tarissement/Resources/Private/Partials/
+		# cat=plugin.tx_tarissement/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:tarissement/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_tarissement//a; type=string; label=Default storage PID
+		storagePid =
+	}
+}

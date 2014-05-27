@@ -1,0 +1,53 @@
+<div class="tx_tarissement_general" id="tx_tarissement_etape3">
+
+
+	<img src="" alt="Img etape" />
+	
+	<p class="tx_tarissement_rouge">Les proposition de traitements ci-dessous réponde au schéma thérapeuthique discuté avec votre vétérinaire.<br />
+	En cas de doute, consultez votre vétérinaire.</p>
+	
+	<div id="tx_tarissement_traitement1" class="tx_tarissement_encartTraitement">
+		<h3>Antibiotique :</h3>
+		<p>
+			Il est recommandé d'administrer aux vaches suivantes un traitement antibiotique défini dans le cadre de la réalisation du bilan sanitaire d'élevage 
+			annuel et de l'élaboration du protocole de soins réalisé avec votre vétérinaire car ces vaches sont infectées.<br />
+			<br />
+			<strong>Vaches concernées :</strong> {listVachesTraitement1}
+		</p>
+	</div>
+	
+	<div id="tx_tarissement_traitement2" class="tx_tarissement_encartTraitement">
+		<h3>Antibiotique + obturateur :</h3>
+		<p>
+			Administrer aux vaches suivantes antibiotique + obturateur car elles sont infectées et le risque de nouvelles infections est présent.<br />
+			<br />
+			<strong>Vaches concernées :</strong> {listVachesTraitement2}
+		</p>
+	</div>
+	
+	<div id="tx_tarissement_traitement3" class="tx_tarissement_encartTraitement">
+		<h3>Obturateur seul :</h3>
+		<p>
+			Lorsque les risques de nouvelles infections au tarissement est moyen ou élevé, il est recommandé d'administrer aux vaches non infectées un obturateur.<br />
+			<br />
+			<strong>Vaches concernées :</strong> {listVachesTraitement3}
+		</p>
+	</div>
+	
+	<div id="tx_tarissement_traitement4" class="tx_tarissement_encartTraitement">
+		<h3>Aucun traitement réalisé ou obturateur seul :</h3>
+		<p>
+			Dasn le cas où les risques de nouvelles infections sont faibles et si la situation sanitaire du troupeau est excellente, il est envisageable de ne rien administrer.<br />
+			<br />
+			<strong>Vaches concernées :</strong> {listVachesTraitement4}
+		</p>
+	</div>
+	
+	
+	<a href="javascript:window.print();" title="Imprimer les propositions" class="tx_tarissement_btn_valider">Imprimer les propositions<a>
+	
+	<f:link.action action="pratiquesTarissement" class="tx_tarissement_btn_valider">Pratiques au tarissement</f:link.action>
+	
+	<f:link.action action="situationTroupeau" class="tx_tarissement_btn_valider">Accueil</f:link.action>
+	
+</div>

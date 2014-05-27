@@ -1,0 +1,164 @@
+<div class="tx_tarissement_general" id="tx_tarissement_etape1">
+
+	<img src="" alt="etape" />
+
+	<p>L'outil mis à votre disposition entre dans le cadre d'un projet experimetal visant à comparer l'impact de deux stratégies de communication sur la mise en pratique du traitement sélectif au tarissement.</p>
+
+	<p class="tx_tarissement_rouge">Les réponses obtenues en fonction des réponses de l'internaute (et donc de sa bonne foi) et n'engagent en aucun cas la responsabilité de l'Institut de l'Elevage.<br />
+	En cas de doute consultez votre vétérinaire.</p>
+
+	<h2>La situation de mon troupeau sur les 12 derniers mois</h2>
+
+	<f:form method="post" action="situationTroupeauForm" id="tx_tarissement_situationTroupeauForm">
+
+		
+	<table border="0" cellspacing="0" cellpadding="5" class="tx_tarissement_question123">
+		<tr>
+			<td><label>1/ Quel est le % de vaches ayant une Concentration Cellulaire Individuelle inférieure à 300 000 cell/mL ? </label>
+			<span class="tx_tarissement_spanHelp">
+				<f:image src="EXT:tarissement/Resources/Public/images/question.png" width="20" height="20" alt="" class="tx_tarissement_help" />
+				<span class="tx_tarissement_encartHelp">
+					Les données (NCI ou NCV) sont issues du dernier bilan annuel contrôle laitier ou bilan santé mamelle ou bilan mammite.
+				</span>
+			</span>
+			</td>
+			<td class="tx_tarissement_colonne2"><f:form.textfield name="pourcentageCCI" value="{pourcentageCCI}" id="tx_tarissement_pourcentageCCI" /> %</td>
+		</tr>
+		<tr>
+			<td><p>2/ Les résultats de concentrations cellulaires laiterie se sont-ils détériorés depuis la mise en place du protocole de soins par mon vétérinaire ? 
+			<span class="tx_tarissement_spanHelp">
+			<f:image src="EXT:tarissement/Resources/Public/images/question.png" width="20" height="20" alt="" class="tx_tarissement_help" />
+				<span class="tx_tarissement_encartHelp">
+					Le bilan cellule produit par le contrôle laitier peut s'appeler le bilan santé mamelle, bilan mammite, ...
+				</span>
+			</span>
+			</p></td>
+			<td class="tx_tarissement_colonne2">
+				<f:if condition="{resultatTraitement}">
+					<f:then>
+						<f:form.radio name="resultatTraitement" value="oui" id="resultatTraitementOui" checked="true" />
+					</f:then>
+					<f:else>
+						<f:form.radio name="resultatTraitement" value="oui" id="resultatTraitementOui" />
+					</f:else>
+				</f:if>
+				<label for="resultatTraitementOui" class="resultatTraitementLabel">Oui</label>
+				<f:if condition="{resultatTraitement}">
+					<f:then>
+						<f:form.radio name="resultatTraitement" value="non" id="resultatTraitementNon" />
+					</f:then>
+					<f:else>
+						<f:form.radio name="resultatTraitement" value="non" id="resultatTraitementNon" checked="true" /> 
+					</f:else>
+				</f:if>
+				<label for="resultatTraitementNon" class="resultatTraitementLabel">Non</label>
+			</td>
+		</tr>
+		<tr>
+			<td><p>3/ Le tri du lait des vaches infectées a-t-il augmenté depuis l'émission du dernier protocole de soins émis par mon vétérinaire ? 
+			<span class="tx_tarissement_spanHelp">
+				<f:image src="EXT:tarissement/Resources/Public/images/question.png" width="20" height="20" alt="" class="tx_tarissement_help" />
+				<span class="tx_tarissement_encartHelp">
+					La proportion de vache dont le lait est triée pour des raisons de [Manque suite texte]
+				</span>
+			</span>
+			</p></td>
+			<td class="tx_tarissement_colonne2">
+				<f:if condition="{triLait}">
+					<f:then>
+						<f:form.radio name="triLait" value="oui" id="triLaitOui" checked="true" />
+					</f:then>
+					<f:else>
+						<f:form.radio name="triLait" value="oui" id="triLaitOui" />
+					</f:else>
+				</f:if>
+				<label for="triLaitOui" class="triLaitLabel">Oui</label> 
+				<f:if condition="{triLait}">
+					<f:then>
+						<f:form.radio name="triLait" value="non" id="triLaitNon" />
+					</f:then>
+					<f:else>
+						<f:form.radio name="triLait" value="non" id="triLaitNon" checked="true" />
+					</f:else>
+				</f:if>
+				<label for="triLaitNon" class="triLaitLabel">Non</label>
+			</td>
+		</tr>
+	</table>
+	
+
+	<h2>Ma stratégie de traitement</h2>
+
+	<p>4/ Je définie le niveau d'exigence de ma stratégie de traitement en cochant l'affirmation qui me correspond le mieux</p>
+
+	<f:if condition="{niveauTraitement}">
+		<f:then>
+			<f:form.radio name="niveauTraitement" value="haut" id="niveauTraitementHaut" checked="true" /> 
+		</f:then>
+		<f:else>
+			<f:form.radio name="niveauTraitement" value="haut" id="niveauTraitementHaut" /> 
+		</f:else>
+	</f:if>
+	<label for="niveauTraitementHaut" class="niveauTraitementLabel">Je souhaite mettre en place une stratégie de traitement antibiotique très sécuritaire 
+	<span class="tx_tarissement_spanHelp">
+		<f:image src="EXT:tarissement/Resources/Public/images/question.png" width="20" height="20" alt="" class="tx_tarissement_help" />
+		<span class="tx_tarissement_encartHelp">
+			[Manque texte]
+		</span>
+	</span>
+	</label><br />
+	<f:if condition="{niveauTraitement}">
+		<f:then>
+			<f:form.radio name="niveauTraitement" value="moyen" id="niveauTraitementMoyen" /> 
+		</f:then>
+		<f:else>
+			<f:form.radio name="niveauTraitement" value="moyen" id="niveauTraitementMoyen" checked="true" /> 
+		</f:else>
+	</f:if>
+	<label for="niveauTraitementMoyen" class="niveauTraitementLabel">Je souhaite mettre en place une stratégie de traitement antibiotique avec un bon niveau de sécurité 
+	<span class="tx_tarissement_spanHelp">
+		<f:image src="EXT:tarissement/Resources/Public/images/question.png" width="20" height="20" alt="" class="tx_tarissement_help" />
+		<span class="tx_tarissement_encartHelp">
+			[Manque texte]
+		</span>
+	</span>
+	</label>
+
+
+	<h2>Le protocole de soin défini par mon vétérinaire</h2>
+
+	<p>Quel est le protocole de soin définit par mon vétérinaire ? 
+		<span class="tx_tarissement_spanHelp">
+			<f:image src="EXT:tarissement/Resources/Public/images/question.png" width="20" height="20" alt="" class="tx_tarissement_help" />
+			<span class="tx_tarissement_encartHelp">
+					A remplir avec l'aide du protocole de soins fournit par mon vétérinaire.
+			</span>
+		</span>
+	</p>
+
+	<table border="0" cellspacing="0" cellpadding="5" class="tx_tarissement_question4">
+		<tr class="tx_tarissement_ligne1">
+			<td></td>
+			<td>Spécialités à utiliser par <br />voie intra mammaire</td>
+			<td>Spécialités à utiliser par <br />voie injectable éventuellement</td>
+			<td>Obturateur de trayon</td>
+		</tr>
+		<tr class="tx_tarissement_ligne2">
+			<td>Vaches saines</td>
+			<td><f:form.textfield name="speIntraSaines" id="tx_tarissement_speIntraSaines" value="{speIntraSaines}" /></td>
+			<td><f:form.textfield name="speInjectSaines" id="tx_tarissement_speInjectSaines" value="{speInjectSaines}" /></td>
+			<td><f:form.textfield name="obtTrayonSaines" id="tx_tarissement_obtTrayonSaines" value="{obtTrayonSaines}" /></td>
+		</tr>
+		<tr>
+			<td>Vaches infectées</td>
+			<td><f:form.textfield name="speIntraInfect" id="tx_tarissement_speIntraInfect" value="{speIntraInfect}" /></td>
+			<td><f:form.textfield name="speInjectInfect" id="tx_tarissement_speInjectInfect" value="{speInjectInfect}" /></td>
+			<td><f:form.textfield name="obtTrayonInfect" id="tx_tarissement_obtTrayonInfect" value="{obtTrayonInfect}" /></td>
+		</tr>
+		
+	</table>
+
+	<a class="tx_tarissement_btn_valider" />Valider</a>
+
+	</f:form>
+</div>

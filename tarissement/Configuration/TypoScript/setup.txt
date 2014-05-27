@@ -1,0 +1,53 @@
+plugin.tx_tarissement {
+	view {
+		templateRootPath = {$plugin.tx_tarissement.view.templateRootPath}
+		partialRootPath = {$plugin.tx_tarissement.view.partialRootPath}
+		layoutRootPath = {$plugin.tx_tarissement.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_tarissement.persistence.storagePid}
+	}
+	features {
+		# uncomment the following line to enable the new Property Mapper.
+		# rewrittenPropertyMapper = 1
+	}
+}
+
+page.includeCSS {
+	style = EXT:tarissement/Resources/Public/css/tarissement_css.css
+	style2 = EXT:tarissement/Resources/Public/css/tarissement_css_print.css
+	style2.media = print
+}
+
+page.includeJSFooter {
+	file1 = EXT:tarissement/Resources/Public/js/jquery.js
+	file2 = EXT:tarissement/Resources/Public/js/tarissementFunctions.js
+}
+
+json = PAGE
+json {
+	typeNum = 54169853
+	config {
+		disableAllHeaderCode = 1
+		xhtml_cleaning = 0
+		admPanel = 0
+		debug = 0
+		no_cache = 1
+		additionalHeaders = Content-type:application/json
+	}
+	10 = USER
+	10 {
+		userFunc = tx_extbase_core_bootstrap->run
+		extensionName = Tarissement
+		pluginName = Tarissementfront
+		switchableControllerActions {
+			Ajax {
+				1 = ajoutVache
+				2 = suppVache
+				3 = recupVache
+				4 = modifVache
+			}
+		}
+	}
+}
+

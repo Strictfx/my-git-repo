@@ -1,0 +1,266 @@
+/* GENERAL
+*******************************************************/
+.tx_tarissement_general {
+	font-family: Helvetica,Arial,"Lucida Grande",sans-serif;
+	font-size:13px;
+	padding-bottom:35px;
+	width:935px;
+}
+
+.tx_tarissement_general h2 {
+	font-size:18px;
+	font-weight:normal;
+}
+
+.tx_tarissement_rouge {
+	color:#CC0000;
+}
+
+.tx_tarissement_spanHelp {
+	position:relative;
+	z-index:1;
+}
+
+.tx_tarissement_spanHelp img {
+	position:relative;
+	z-index:2;
+}
+
+.tx_tarissement_encartHelp {
+	display:none;
+	width:200px;
+	background-color:#FFE2BF;
+	position:absolute;
+	top:0;
+	left:10px;
+	padding:5px;
+	box-shadow:1px 1px 5px grey;
+	text-align:justify;
+	font-style:italic;
+	font-size:0.9em;
+	z-index:10;
+}
+
+.tx_tarissement_general label {
+	font-weight:normal;
+}
+
+/* SITUATION TROUPEAU
+*******************************************************/
+
+.tx_tarissement_general table {
+	border-collapse:collapse;
+	font-size:13px;
+	width:97%;
+}
+
+.tx_tarissement_general table.tx_tarissement_question123 {
+	border:none;
+	width:100%;
+}
+
+.tx_tarissement_general table.tx_tarissement_question123 td {
+	padding-bottom:15px;
+}
+
+.tx_tarissement_general table.tx_tarissement_question4 {
+	border:1px solid black;
+	width:90%;
+	margin-bottom:25px;
+}
+
+.tx_tarissement_general td {
+	valign:center;
+}
+
+.tx_tarissement_general .tx_tarissement_question4 td {
+	text-align:center;
+	valign:center;
+	border:1px solid #2F2F2F;
+}
+
+.tx_tarissement_general .tx_tarissement_ligne1 td {
+	background-color:#AFAFAF;
+}
+
+.tx_tarissement_general .tx_tarissement_ligne2 td {
+	background-color:#DFDFDF;
+}
+
+.tx_tarissement_general .tx_tarissement_question4 td input {
+	width:90%;
+}
+
+#tx_tarissement_pourcentageCCI {
+	width:90px;
+}
+
+.tx_tarissement_colonne2 {
+		width:20%;
+		text-align:center;
+}
+
+.tx_tarissement_btn_valider {
+	background-color:#269326;
+	border:none;
+	padding:5px 15px;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	-o-border-radius:3px;
+	-ms-border-radius:3px;
+	border-radius:3px;
+	color:white;
+	float:right;
+	margin-left:25px;
+	text-decoration:none;
+	color:white !important;
+}
+
+.tx_tarissement_btn_valider:hover, .tx_tarissement_btn_valider:focus, .tx_tarissement_btn_valider:active {
+	background-color:#1B771B;
+	color:white;
+	cursor:pointer;
+}
+
+.tx_tarissement_errorField { border:1px solid #CC0000; }
+.tx_tarissement_errorLabel { color:#CC0000; }
+
+.tx_tarissement_messageErreur {
+	width:90%;
+	text-align:center;
+	margin:25px;
+	padding:25px 0;
+}
+
+
+/* SITUATION VACHE
+*******************************************************/
+.tx_tarissement_novache {
+	text-align:center;
+}
+
+.tx_tarissement_listVache td {
+	height:35px;
+}
+
+.tx_tarissement_listVache .tx_tarissement_ligne1 {
+	
+}
+
+/* Formulaire d'ajout */
+#tx_tarissement_situationVachesDivForm {
+	width:80%;
+	margin:auto;
+	margin-bottom:25px;
+	border:1px solid grey;
+	padding:15px;
+}
+
+#tx_tarissement_situationVachesForm label {
+	display:block;
+	float:left;
+	width:70%;
+}
+
+#tx_tarissement_ajoutVache, #tx_tarissement_modifVache {
+	margin-left:40%;
+	float:none;
+}
+
+#tx_tarissement_modifVache {
+	display:none;
+}
+
+.tx_tarissement_modifVache {
+	display:block;
+	width:20px;
+	height:20px;
+	margin:auto;
+	background-image:url('../images/edit.png');
+	background-position:center center;
+	background-repeat:no-repeat;
+}
+
+.tx_tarissement_suppVache {
+	display:block;
+	width:20px;
+	height:20px;
+	margin:auto;
+	background-image:url('../images/delete.png');
+	background-position:center center;
+	background-repeat:no-repeat;
+}
+
+#tx_tarissement_situationVachesForm  label.tx_tarissement_ouiNon {
+	float:none;
+	width:auto;
+	display:inline;
+}
+
+.tx_tarissement_listVache .tx_tarissement_ligne1 td {
+	text-align:left;
+}
+
+.tx_tarissement_listVache td {
+	text-align:center;
+}
+
+.tx_tarissement_tdNomVache { width:250px; }
+.tx_tarissement_tdCCI { width:80px; }
+.tx_tarissement_tdMammiteClinique { width:auto; }
+.tx_tarissement_tdTroisiemeLactation { width:auto; }
+.tx_tarissement_tdPlancherMamelle { width:auto; }
+.tx_tarissement_tdPresencePlaies { width:auto; }
+.tx_tarissement_tdLesionsTrayons { width:auto; }
+.tx_tarissement_tdPertesLait { width:auto; }
+.tx_tarissement_tdTrayonsCourts { width:auto; }
+.tx_tarissement_tdSupp { width:30px; }
+
+.tx_tarissement_suppVache { display:block; cursor:pointer; }
+
+
+
+#tx_tarissement_OuiEnBatiment {
+	padding-left:50px;
+	display:none;
+}
+#tx_tarissement_OuiAuPaturage {
+	padding-left:50px;
+	display:none;
+}
+
+#tx_tarissement_OuiEnBatiment label {
+	display:block;
+	width:350px;
+	float:left;
+}
+
+#tx_tarissement_OuiAuPaturage label {
+	display:block;
+	width:600px;
+	float:left;
+}
+
+#tx_tarissement_OuiEnBatiment .tx_tarissement_ouiNon, #tx_tarissement_OuiAuPaturage .tx_tarissement_ouiNon {
+	display:inline;
+	width:auto;
+	float:none;
+}
+
+
+.tx_tarissement_encartTraitement {
+	border:1px solid black;
+	margin:0 15px 25px 15px;
+	padding:5px 15px;
+}
+
+/* IMPORT FICHIER CSV
+*******************************************************/
+
+#tx_tarissement_envoiFichierCSV {
+	float:left;
+	margin-top:25px;
+	margin-left:0px;
+}
+
+
